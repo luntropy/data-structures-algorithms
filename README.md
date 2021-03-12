@@ -1,4 +1,4 @@
-# Algorithms
+# Data structures & Algorithms
 
 ## Bubble sort
 Time complexity: O(n^2)
