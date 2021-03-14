@@ -3,7 +3,7 @@
 
 
 ## Bubble sort
-Time complexity: O(n^2)
+Time complexity: O(n^2)\
 Space complexity: O(1)
 
 - The worst case occurs when the array is reverse sorted.
@@ -18,7 +18,7 @@ Space complexity: O(1)
 - The second iteration must be dependent on 'i'. No point in trying to sort elements that are already sorted.
 
 ## Selection sort
-Time complexity: O(n^2)
+Time complexity: O(n^2)\
 Space complexity: O(1)
 
 ### Notes
@@ -27,7 +27,7 @@ Space complexity: O(1)
 - Second iteration must be dependent on 'i' otherwise it considers the already ordered smallest elements.
 
 ## Insertion sort
-Time complexity: O(n^2)
+Time complexity: O(n^2)\
 Space complexity: O(1)
 
 ### Notes
@@ -35,8 +35,8 @@ Space complexity: O(1)
 - Each element overwrites its next element starting from one element before the given key element until the key element finds its correct position.
 
 ## Counting sort
-Time complexity: O(n + k)
-Space complexity: O(n + k)
+Time complexity: O(n + k)\
+Space complexity: O(n + k)\
 k - the range of the input
 
 ### Notes
@@ -44,20 +44,20 @@ k - the range of the input
 - For each element position, summarize the values of the previous elements.
 - Order the elements in resulting array.
 
-- The position of a given element (arr[i]) in the resulting array (res_arr) is the result from the counting array (cnt_arr) at the position of the element's value minus one:
+- The position of a given element (arr[i]) in the resulting array (res_arr) is the result from the counting array (cnt_arr) at the position of the element's value minus one:\
 `res_arr[cnt_arr[arr[i]] - 1] = arr[i]`
 
 #### Optimizations to work with negative values
 - We need to take into consideration that the range is not between positive numbers.
-- That is why we get the maximum and minimum element from the array and calculate the range:
+- That is why we get the maximum and minimum element from the array and calculate the range:\
 `range = max_element - min_element + 1`
 
 - The counting array is generated using that range.
-- When the elements are counted their position is based on the element's value minus the minimum element in the array:
+- When the elements are counted their position is based on the element's value minus the minimum element in the array:\
 `counting[arr[i] - min_element] += 1`
 
 ## Merge sort
-Time complexity: O(n * log(n))
+Time complexity: O(n * log(n))\
 Space complexity: O(n * log(n))
 
 - Divides the array in two halves and takes linear time to merge.
@@ -67,7 +67,7 @@ Space complexity: O(n * log(n))
 - Use while loops to merge two sorted arrays.
 
 ## Quick sort
-Time complexity: O(n * log(n))
+Time complexity: O(n * log(n))\
 Space complexity: O(log(n))
 
 - Traversing the array when positioning the elements compared to the pivot.
@@ -78,10 +78,10 @@ Space complexity: O(log(n))
 - Proceed if low < high.
 - Choose pivot 'x' (randomly) and sort compared to the pivot by placing the values less than 'x' in its left side and the values, bigger than 'x' on its right side.
 - Position all the elements before repositioning the pivot in its correct position.
-- The partition function must return the index of positioned 'x'.
+- The partition function must return the index of positioned 'x'.\
 `partition(arr, low, high)`
-- When calling recursively quick sort the pivot should be excluded:
-`quick_sort(arr, left, pi - 1)`
+- When calling recursively quick sort the pivot should be excluded:\
+`quick_sort(arr, left, pi - 1)`\
 `quick_sort(arr, pi - 1, right)`
 - All the time we work with the same array but in different parts of it and we are just swapping positions.
 - The partitioning does not care to order them perfectly, it just positions them correctly compared to the pivot.
@@ -90,7 +90,7 @@ Space complexity: O(log(n))
 - The partition always takes the pivot at high index. When randomizing we use another function that switches the randomly chosen element with the element in the high index.
 
 ## Bucket sort
-- Time complexity: O(n + k)
+- Time complexity: O(n + k)\
 - Space complexity: O(n + k)
 
 - Worst case time complexity: O(n^2)
@@ -105,19 +105,19 @@ Space complexity: O(log(n))
 - The count of the buckets can be the length of the array.
 
 ## Radix sort
-- Time complexity: O(d * (n + b))
+- Time complexity: O(d * (n + b))\
 - Space complexity: O(n + 2^d)
 
 ### Notes
 - The counting sort traverses the array backwards (when assigning the numbers to the output array) because it needs to preserve the ordering, established by previous calls to counting sorts (needs to be stable).
-- Example:
-Input: [ 643, 613 ]
+- Example:\
+Input: [ 643, 613 ]\
 Order by second digit -> [ 613, 643 ]. If we traverse forward the first index to assign 613 will be 5 and then 4 for 643, so we will have [ 643, 613 ], but if we traverse backwards we will preserve the order -> [ 613, 643 ].
 
 - One algorithm is stable if the order of the elements is preserved.
 
 ## Heap sort
-- Time complexity: O(n * log(n))
+- Time complexity: O(n * log(n))\
 - Space complexity: O(1)
 
 - Building the heap has time complexity O(n).
@@ -127,29 +127,29 @@ Order by second digit -> [ 613, 643 ]. If we traverse forward the first index to
 - For ordering of the array we move the root (the maximum element in the max-heap) in the last index then we resize the heap with one and reorder it to be max-heap again. It is repeated until one element is left in the heap.
 
 ## Linear search
-Time complexity: O(n)
+Time complexity: O(n)\
 Space complexity: O(1)
 
 ## Binary search
-Time complexity: O(log(n))
-Space complexity: O(1)
+Time complexity: O(log(n))\
+Space complexity: O(1)\
 
 ! Works only for sorted arrays.
 
 ### Notes
 - If left <= high, proceed.
-- Middle position calculation:
+- Middle position calculation:\
 `middle = left + (right - left) // 2`
 - Check if the element at the middle (arr[middle]) of the array is 'x'. If it is not, call the binary searched.
-- If  x < arr[middle], then call the binary search for the left side of the array.
+- If  x < arr[middle], then call the binary search for the left side of the array.\
 `binary_search(arr, left, middle - 1, x)`
-- If x > arr[middle], then call binary search for the right side of the array:
+- If x > arr[middle], then call binary search for the right side of the array:\
 `binary_search(arr, middle + 1, right, x)`
 - Exclude the middle position since we already know that is is not 'x'.
 
 ## Ternary search
-Time complexity: O(log3(n))
-Space complexity: O(1)
+Time complexity: O(log3(n))\
+Space complexity: O(1)\
 
 ! Works only for sorted arrays.
 
@@ -157,9 +157,9 @@ Space complexity: O(1)
 - Same as binary search but we separate the array in three parts.
 
 ## DFS
-- Time complexity: O(b^m)
+- Time complexity: O(b^m)\
 - Space complexity: O(b * m)
 
 ## BFS
-- Time complexity: O(b^(d + 1))
+- Time complexity: O(b^(d + 1))\
 - Space complexity: O(b^(d + 1))
