@@ -2,7 +2,7 @@
 ## Purpose
 Overview of data structures and algorithms.
 
-# Algorithms
+## Algorithms
 ## Bubble sort
 Time complexity: O(n^2)\
 Space complexity: O(1)
@@ -165,12 +165,12 @@ Space complexity: O(b * m)
 Time complexity: O(b^(d + 1))\
 Space complexity: O(b^(d + 1))
 
-# Data structures
-## Binary tree
-- Worst case time complexity
+## Data structures
+## Binary search tree
+- Worst case time complexity\
 Time complexity, search: O(n)\
 Time complexity, insert: O(n)
 
-- Average case time complexity
+- Average case time complexity\
 Time complexity, search: O(log(n))\
 Time complexity, insert: O(log(n))
