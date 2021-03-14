@@ -90,8 +90,8 @@ Space complexity: O(log(n))
 - The partition always takes the pivot at high index. When randomizing we use another function that switches the randomly chosen element with the element in the high index.
 
 ## Bucket sort
-- Time complexity: O(n + k)\
-- Space complexity: O(n + k)
+Time complexity: O(n + k)\
+Space complexity: O(n + k)
 
 - Worst case time complexity: O(n^2)
 
@@ -105,8 +105,8 @@ Space complexity: O(log(n))
 - The count of the buckets can be the length of the array.
 
 ## Radix sort
-- Time complexity: O(d * (n + b))\
-- Space complexity: O(n + 2^d)
+Time complexity: O(d * (n + b))\
+Space complexity: O(n + 2^d)
 
 ### Notes
 - The counting sort traverses the array backwards (when assigning the numbers to the output array) because it needs to preserve the ordering, established by previous calls to counting sorts (needs to be stable).
@@ -117,8 +117,8 @@ Order by second digit -> [ 613, 643 ]. If we traverse forward the first index to
 - One algorithm is stable if the order of the elements is preserved.
 
 ## Heap sort
-- Time complexity: O(n * log(n))\
-- Space complexity: O(1)
+Time complexity: O(n * log(n))\
+Space complexity: O(1)
 
 - Building the heap has time complexity O(n).
 
@@ -157,9 +157,9 @@ Space complexity: O(1)\
 - Same as binary search but we separate the array in three parts.
 
 ## DFS
-- Time complexity: O(b^m)\
-- Space complexity: O(b * m)
+Time complexity: O(b^m)\
+Space complexity: O(b * m)
 
 ## BFS
-- Time complexity: O(b^(d + 1))\
-- Space complexity: O(b^(d + 1))
+Time complexity: O(b^(d + 1))\
+Space complexity: O(b^(d + 1))
