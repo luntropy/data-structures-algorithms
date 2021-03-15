@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
 import sys
-sys.path.append('../algorithms/')
-import algorithms as alg
+sys.path.append('../')
+from algorithms import traversal_algorithms as trav_alg
 
 class Node:
     def __init__(self, key = None):
@@ -82,16 +82,17 @@ class Node:
             return None
 
     def preorder(self):
-        alg.preorder(self)
+        trav_alg.preorder(self)
 
     def inorder(self):
-        alg.inorder(self)
+        trav_alg.inorder(self)
 
     def postorder(self):
-        alg.postorder(self)
+        trav_alg.postorder(self)
 
 if __name__ == '__main__':
     root = Node()
+
     root.insert(2)
     root.insert(0)
     root.insert(1)

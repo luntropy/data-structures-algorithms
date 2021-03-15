@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
 import sys
-sys.path.append('../algorithms/')
-import algorithms as alg
+sys.path.append('../')
+from algorithms import traversal_algorithms as trav_alg
 
 class Graph:
     def __init__(self):
@@ -15,13 +15,13 @@ class Graph:
         self.graph[u].append(v)
 
     def dfs(self, s):
-        alg.dfs(self.graph, s)
+        trav_alg.dfs(self.graph, s)
 
     def dfs_stack(self, s):
-        alg.dfs_stack(self.graph, s)
+        trav_alg.dfs_stack(self.graph, s)
 
     def bfs(self, s):
-        alg.bfs(self.graph, s)
+        trav_alg.bfs(self.graph, s)
 
 if __name__ == '__main__':
     g = Graph()

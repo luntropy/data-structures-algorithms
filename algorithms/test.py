@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
-import algorithms as alg
+import sorting_algorithms as sort_alg
+import searching_algorithms as search_alg
 
 def compare(arr, res):
     if len(arr) != len(res):
@@ -26,16 +27,16 @@ if __name__ == '__main__':
     arr = [ 170, 45, 75, 90, 802, 24, 2, 66 ]
     correct_res = [ 2, 24, 45, 66, 75, 90, 170, 802 ]
 
-    # alg.bubble_sort(arr)
-    # alg.selection_sort(arr)
-    # alg.insertion_sort(arr)
-    # alg.counting_sort(arr)
-    # alg.merge_sort(arr)
-    # alg.quick_sort(arr, 0, len(arr) - 1)
-    # alg.bucket_sort(arr)
-    # alg.bucket_sort_modified(arr)
-    alg.radix_sort(arr)
-    # alg.heap_sort(arr)
+    # sort_alg.bubble_sort(arr)
+    # sort_alg.selection_sort(arr)
+    # sort_alg.insertion_sort(arr)
+    # sort_alg.counting_sort(arr)
+    # sort_alg.merge_sort(arr)
+    # sort_alg.quick_sort(arr, 0, len(arr) - 1)
+    # sort_alg.bucket_sort(arr)
+    # sort_alg.bucket_sort_modified(arr)
+    # sort_alg.radix_sort(arr)
+    sort_alg.heap_sort(arr)
 
     if compare(arr, correct_res):
         print('Works!')
@@ -48,14 +49,14 @@ if __name__ == '__main__':
     x = -4
     correct_idx_x = 2
 
-    # idx = alg.linear_search(arr, x)
+    # idx = search_alg.linear_search(arr, x)
 
     arr = [ 1, 2, 3, 4, 4, 5, 6 ]
     x = 3
     correct_idx_x = 2
 
-    # idx = alg.binary_search(arr, 0, len(arr) - 1, x)
-    idx = alg.ternary_search(arr, 0, len(arr) - 1, x)
+    idx = search_alg.binary_search(arr, 0, len(arr) - 1, x)
+    # idx = search_alg.ternary_search(arr, 0, len(arr) - 1, x)
 
     if idx == correct_idx_x:
         print('Works!')
