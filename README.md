@@ -133,7 +133,7 @@ Space complexity: O(1)
 
 ## Binary search
 Time complexity: O(log(n))\
-Space complexity: O(1)\
+Space complexity: O(1)
 
 ! Works only for sorted arrays.
 
@@ -150,7 +150,7 @@ Space complexity: O(1)\
 
 ## Ternary search
 Time complexity: O(log3(n))\
-Space complexity: O(1)\
+Space complexity: O(1)
 
 ! Works only for sorted arrays.
 
